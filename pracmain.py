@@ -8,9 +8,13 @@ import jwt
 from datetime import datetime,timedelta,timezone
 from jwt.exceptions import ExpiredSignatureError, InvalidTokenError
 
+import os
+from dotenv import load_getenv
+load_getenv()
+
 
 p1=PasswordHash.recommended()
-secret="yashsoviet"
+secret=os.getenv("secret")
 security=HTTPBearer()
 
 app=FastAPI(title="STUDENT")
