@@ -9,8 +9,8 @@ from datetime import datetime,timedelta,timezone
 from jwt.exceptions import ExpiredSignatureError, InvalidTokenError
 
 import os
-from dotenv import load_getenv
-load_getenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 
 p1=PasswordHash.recommended()
